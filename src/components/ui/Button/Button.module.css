@@ -1,0 +1,85 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  min-height: 44px; /* Touch-friendly */
+  position: relative;
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3);
+}
+
+.primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.primary:hover:not(:disabled) {
+  background: #0056CC;
+  transform: translateY(-1px);
+}
+
+.primary:active {
+  transform: translateY(0);
+  background: #004999;
+}
+
+.secondary {
+  background: var(--surface);
+  color: var(--primary-color);
+  border: 1px solid var(--border);
+}
+
+.small {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.medium {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+.large {
+  padding: 16px 32px;
+  font-size: 18px;
+}
+
+.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Мобильные адаптации */
+@media (hover: none) and (pointer: coarse) {
+  .button:hover {
+    transform: none;
+    background: var(--primary-color);
+  }
+  
+  .button:active {
+    transform: scale(0.98);
+  }
+}
