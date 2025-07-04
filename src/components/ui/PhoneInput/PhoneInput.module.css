@@ -1,0 +1,50 @@
+.phoneInputContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(242, 242, 245, 1);
+  border-radius: 12px;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 1);
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+
+.phoneInputContainer:focus-within {
+  border-color: rgba(237, 202, 184, 1);
+}
+
+.flagContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.flag {
+  width: 21px;
+  height: 16px;
+}
+
+.phoneInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: rgba(2, 14, 34, 1);
+  letter-spacing: 0.2px;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.clearButton {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
