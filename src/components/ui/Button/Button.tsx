@@ -1,22 +1,32 @@
 import React from "react";
 import styles from "./Button.module.css";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "ghost";
-  size?: "small" | "medium" | "large";
-  loading?: boolean;
+interface ButtonProps {
   children: React.ReactNode;
+  onClick?: () => void;
+  disabled?: boolean;
+  className?: string;
+  showArrow?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({
-  loading = false,
-  disabled,
+const Button: React.FC<ButtonProps> = ({
   children,
-  ...props
+  onClick,
+  disabled = false,
+  showArrow = true,
+  className = "",
 }) => {
   return (
-    <button className={""} disabled={disabled || loading} {...props}>
-      {loading ? <span className={styles.spinner} /> : children}
+    <button
+      className={`${styles.button} ${className}`}
+      onClick={onClick}
+      disabled={disabled}
+      type="button"
+    >
+      {children}
+      {showArrow && <span className={styles.arrow}>→</span>}
     </button>
   );
 };
+
+export default Button;

@@ -1,18 +1,49 @@
+@font-face {
+  font-family: "SF Pro Rounded500";
+  src: url("../assets/fonts/SF-Pro-Rounded-Medium.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded300";
+  src: url("../assets/fonts/SF-Pro-Rounded-Light.otf") format("opentype");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded700";
+  src: url("../assets/fonts/SF-Pro-Rounded-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded400";
+  src: url("../assets/fonts/SF-Pro-Rounded-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SFPro590";
+  src: url("../assets/fonts/SF-Pro-Text-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
 :root {
-  --primary-color: #007AFF;
-  --secondary-color: #5856D6;
-  --error-color: #FF3B30;
-  --success-color: #34C759;
-  --background: #F2F2F7;
-  --surface: #FFFFFF;
-  --text-primary: #000000;
-  --text-secondary: #8E8E93;
-  --border: #C6C6C8;
-  --border-focus: #007AFF;
-  
-  --border-radius: 12px;
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --transition: all 0.2s ease;
+  --background: rgba(252, 252, 252, 1);
+  --text-primary: rgba(0, 0, 0, 1);
+  --text-secondary: rgba(101, 105, 114, 1);
+  --text-thirty: rgba(43, 49, 52, 1);
+  --text-regular: rgba(153, 158, 167, 1);
+  --text-input: rgba(2, 14, 34, 1);
 }
 
 * {
@@ -21,16 +52,47 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  font-family: "SF Pro Rounded500";
+  color: var(--text-primary);
+}
+
+h2 {
+  font-family: "SF Pro Rounded700";
+  color: var(--text-thirty);
+}
+
+h3 {
+  font-family: "SFPro590";
+}
+
+p {
+  font-family: "SF Pro Rounded300";
+  color: var(--text-secondary);
+}
+
+label {
+  font-family: "SF Pro Rounded400";
+  color: var(--text-regular);
+}
+
+span {
+  font-family: "SF Pro Rounded400";
+  color: var(--text-secondary);
+}
+
 body {
   background-color: var(--background);
-  color: var(--text-primary);
+  margin-left: 15px;
+  margin-right: 15px;
   touch-action: manipulation; /* Отключает double-tap zoom */
   -webkit-tap-highlight-color: transparent; /* Убирает подсветку при тапе */
 }
@@ -46,4 +108,13 @@ body {
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;
+}
+
+button {
+  font-family: "SF Pro Rounded500";
+}
+
+input {
+  font-family: "SF Pro Rounded400";
+  color: var(--text-input);
 }
