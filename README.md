@@ -32,8 +32,5 @@ npm run dev
 
 ## Видеообзоры на 2 устройствах
 
-Браузер chrome:
-<video controls src="Запись экрана 2025-07-04 в 23.52.51.mov" title="Title"></video>
-
-iPhone 13:
-<video controls src="ScreenRecording_07-04-2025 23-48-13_1.MP4" title="Title"></video>
+- Браузер chrome
+- iPhone 13
