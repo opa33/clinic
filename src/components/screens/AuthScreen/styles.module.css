@@ -13,9 +13,6 @@
   justify-content: flex-start;
   height: 93%;
   width: 100%;
-  background-color: #ffffff;
-  box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 .content {

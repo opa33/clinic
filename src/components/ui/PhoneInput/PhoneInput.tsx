@@ -9,7 +9,6 @@ interface PhoneInputProps {
   onClear: () => void;
 }
 
-// Форматирование номера
 const formatPhoneNumber = (number: string) => {
   const cleaned = number.replace(/\D/g, "");
   const match = cleaned.match(/^7(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})$/);
@@ -27,7 +26,6 @@ const formatPhoneNumber = (number: string) => {
   return number;
 };
 
-// Обработка изменения значения
 const handleInputChange =
   (onChange: (value: string) => void) =>
   (e: React.ChangeEvent<HTMLInputElement>) => {

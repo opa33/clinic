@@ -93,18 +93,17 @@ body {
   background-color: var(--background);
   margin-left: 15px;
   margin-right: 15px;
-  touch-action: manipulation; /* Отключает double-tap zoom */
-  -webkit-tap-highlight-color: transparent; /* Убирает подсветку при тапе */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent; 
 }
 
 /* Мобильные стили */
 @media (max-width: 768px) {
   html {
-    font-size: 16px; /* Предотвращает zoom при фокусе на input */
+    font-size: 16px;
   }
 }
 
-/* Кастомные скроллбары */
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;
