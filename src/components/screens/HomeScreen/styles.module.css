@@ -47,7 +47,7 @@
   font-size: 30px;
   line-height: 41px;
   letter-spacing: 0.4px;
-  color: #000000;
+  color: #343434;
   margin: 0;
 }
 
@@ -55,6 +55,7 @@
   font-size: 15px;
   line-height: 100%;
   letter-spacing: 0.4px;
+  color: #656972;
 }
 
 .buttonContainer {
